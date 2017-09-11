@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'		" 插件管理器
 Plugin 'nanotech/jellybeans.vim'	" 配色主题
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'			" 状态条
 Plugin 'marijnh/tern_for_vim'		" JS自动补全(需要ycm和tern)
 Plugin 'scrooloose/nerdtree'		" 目录树
@@ -15,7 +16,11 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " 插件选项: jellybeans
 syntax on
-colorscheme jellybeans
+set t_Co=256
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+colorscheme solarized
 " 插件选项: airline
 let g:airline_powerline_fonts = 1
 " 插件选项: tern_for_vim
